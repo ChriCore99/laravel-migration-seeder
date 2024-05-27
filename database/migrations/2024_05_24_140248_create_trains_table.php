@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('trains', function (Blueprint $table) {
             $table->id();
+
             $table->string('agencies', 175);
             $table->string('departures_stations', 150);
             $table->string('arrives_stations', 150);
@@ -22,6 +23,7 @@ return new class extends Migration
             $table->unsignedTinyInteger('wagons_numbers');
             $table->boolean('punctuals')->default(true);
             $table->boolean('cancelleds');
+            
             $table->timestamps();
         });
     }
